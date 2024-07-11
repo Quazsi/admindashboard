@@ -13,7 +13,7 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr, 5fr, 1fr;
+    grid-template-columns: 1fr 5fr 1fr;
 }
 /*-------------------------Header---------------------------*/
 #header {
@@ -132,6 +132,8 @@ button {
     color: white;
     font-size: 1.5rem;
     font-weight: bold;
+    width: 100%;
+    max-width: 300px;
 }
 
 #sidebar > div {
@@ -185,7 +187,7 @@ button {
 
 #projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
 }
 
@@ -201,7 +203,7 @@ button {
     color: black;
     text-align: center;
     height: 200px;
-    width: 450px;
+    width: 300px;
                 /* Left border with color */
                 border-left: 1rem solid #f0be48;
                 /* Rounded corners */
@@ -260,7 +262,7 @@ button {
 
 .heading {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     padding: 2%;
 }
 
@@ -271,8 +273,8 @@ button {
 }
 
 .trend .avatar {
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
 }
 #contentWrapper {
     grid-column: 2 / 4;
