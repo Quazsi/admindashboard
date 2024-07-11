@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
   }
+
+  
 
   html, body {
     height: 100%; /* Make sure the body takes full height */
@@ -10,15 +13,118 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr, 3fr, 1fr;
+    grid-template-columns: 1fr, 4fr, 1fr;
 }
-
+/*-------------------------Header---------------------------*/
 #header {
     grid-column: 2 / 5;
-    background-color: red;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
-/*Sidebar */
+#searchbar img {
+    width: 5%;
+    height: auto;
+}
+
+#user {
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+}
+
+#user svg {
+    width: 100%; /* Set your desired width */
+    height: auto; /* Let the browser calculate the height to maintain aspect ratio */
+}
+
+
+
+.avatar{
+    width: 100px; /* Set the size of the container */
+    height: 100px; /* Make it square to maintain aspect ratio for circular effect */
+    border-radius: 50%; /* Make the container circular */
+    background-color: #f0f0f0; /* Background color of the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide any overflow content beyond the circle */
+}
+
+#navbar {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+#searchbar {
+    grid-column: 1 / 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10%;
+}
+
+#searchbar input[type="text"] {
+    width: 80%;
+    background-color: #e2e8f0;
+    height: 30px;
+    border-radius: 25px;
+}
+
+#userInfo {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    font-size: larger;
+    font-weight: bold;
+}
+
+#userInfo .avatar{
+    width: 50px;
+    height: 50px;
+}
+#userInfo img {
+    width: 5%;
+    height: auto;
+}
+
+#hello > p{
+font-size: 1rem;
+font-weight: bold;
+}
+
+#userName > p {
+font-size: 2rem;
+font-weight: bold;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+button {
+    background-color: #1992d4;
+    border-color:  #1992d4;
+    color: white;
+    border-radius: 30px;
+    height: 40px;
+    width: 120px;
+    font-size: 1.5rem;
+
+}
+
+#userButtons {
+    grid-column:  2 / 3;
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+/* ----------------------Sidebar------------------------ */
 #sidebar {
     background-color: #1992d4;
     grid-column: 1 / 2;
@@ -30,10 +136,10 @@ body {
 
 #sidebar > div {
     display: flex;
-    align-items: center;  /* Align items vertically in the center */
-    justify-content: flex-start; /* Align items horizontally in the center */
-    text-align: center; /* Center-align the text */
-    padding: 10px; /* Add padding around each item for spacing */
+    align-items: center;  
+    justify-content: flex-start; 
+    text-align: center; 
+    padding: 10px; 
     padding-left: 10%;
 }
 
@@ -41,6 +147,10 @@ body {
     width: 20%;
     height: auto;
     padding-right: 2%;
+}
+
+#dashboard {
+    font-size: 2.5rem;
 }
 #sidebar img {
     filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
@@ -51,11 +161,21 @@ body {
 }
 
 /*------------------*/
-#projects {
+#contentWrapper {
     grid-column: 2 / 4;
+    padding-left: 5%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: #e2e8f0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    column-gap: 2%;
+}
+#projects {
+    background-color: #e2e8f0;
 }
 
 #projects {
+    grid-column: 1 / 2;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 15px;
@@ -73,8 +193,66 @@ body {
     color: black;
     text-align: center;
     height: 200px;
+                /* Left border with color */
+                border-left: 1rem solid yellow;
+                /* Rounded corners */
+                border-top-left-radius: 15px;
+                border-bottom-left-radius: 15px;
   }
 
   .title {
     font-weight: bold;
   }
+
+
+/*---------------Right Bar -------------*/
+#rightBar {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin-right: 10%;
+}
+  
+/* --------------Announcements -----------*/
+#announcements {
+    grid-column: 2 / 3;
+    background-color: white;
+}
+
+/* --------------Trending -----------*/
+    
+#trending {
+    grid-column: 2 / 3;
+}
+
+#trendingBox {
+    background-color: white;
+ 
+}
+
+.trend .avatar {
+    width: 75px;
+    height: 75px;
+}
+#contentWrapper {
+    grid-column: 2 / 4;
+    padding-left: 5%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: #e2e8f0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    column-gap: 2%;
+}
+
+.trend {
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+.handle {
+    font-weight: bold;
+}
+
+.handleName {
+    font-weight: light;
+}
