@@ -13,7 +13,7 @@
 
 body {
     display: grid;
-    grid-template-columns: 1fr, 4fr, 1fr;
+    grid-template-columns: 1fr, 5fr, 1fr;
 }
 /*-------------------------Header---------------------------*/
 #header {
@@ -160,6 +160,10 @@ button {
 
 }
 
+#home, #settings {
+    margin-top: 15%;
+}
+
 /*------------------*/
 #contentWrapper {
     grid-column: 2 / 4;
@@ -174,12 +178,16 @@ button {
     background-color: #e2e8f0;
 }
 
-#projects {
+#projectsWrapper {
     grid-column: 1 / 2;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
+
   }
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 25px;
+}
 
   #projects p {
     font-size: 18px;
@@ -193,17 +201,31 @@ button {
     color: black;
     text-align: center;
     height: 200px;
+    width: 450px;
                 /* Left border with color */
-                border-left: 1rem solid yellow;
+                border-left: 1rem solid #f0be48;
                 /* Rounded corners */
                 border-top-left-radius: 15px;
                 border-bottom-left-radius: 15px;
+    padding: 5%;            
   }
 
   .title {
     font-weight: bold;
   }
 
+  .cardIcons img {
+    width: 10%;
+    filter: invert(89%) sepia(6%) saturate(1126%) hue-rotate(180deg) brightness(90%) contrast(95%);
+
+  }
+
+  .cardIcons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3%;
+    align-items: center;
+  }
 
 /*---------------Right Bar -------------*/
 #rightBar {
