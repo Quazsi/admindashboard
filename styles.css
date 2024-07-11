@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%; /* Make sure the body takes full height */
+}  
+
+body {
+    display: grid;
+    grid-template-columns: 1fr, 3fr, 1fr;
+}
+
+#header {
+    grid-column: 2 / 5;
+    background-color: red;
+}
+
+/*Sidebar */
+#sidebar {
+    background-color: aqua;
+    grid-column: 1 / 2;
+    grid-row: 1 / 5;
+}
+
+#sidebar img {
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+    width: 20%;
+    height: auto;
+}
+
+/*------------------*/
+#projects {
+    grid-column: 2 / 4;
+}
+
+#projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  #projects p {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: black;
+    text-align: left;
+  }
+  
+  #projects .card {
+    background-color: #FFFFFF;
+    color: black;
+    text-align: center;
+    height: 200px;
+  }
+
+  .title {
+    font-weight: bold;
+  }
