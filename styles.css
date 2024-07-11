@@ -209,13 +209,25 @@ button {
 #rightBar {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    margin-right: 10%;
+    margin-right: 5%;
 }
   
 /* --------------Announcements -----------*/
-#announcements {
+#announcementsWrapper {
     grid-column: 2 / 3;
+}
+#announcements {
     background-color: white;
+}
+
+.announcement {
+ padding: 5%;
+ box-shadow: 0 10px 6px -4px rgba(56, 56, 56, 0.1); /* Adjust the blur, spread, and opacity as needed */
+}
+
+.announcementTitle {
+    font-weight: bold;
+    font-size: large;
 }
 
 /* --------------Trending -----------*/
@@ -224,8 +236,15 @@ button {
     grid-column: 2 / 3;
 }
 
+.heading {
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 2%;
+}
+
 #trendingBox {
     background-color: white;
+    padding: 5%;
  
 }
 
